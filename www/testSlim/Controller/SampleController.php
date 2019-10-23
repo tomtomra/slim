@@ -1,14 +1,23 @@
 <?php
 
+use Slim\Container;
 use Slim\Http\Request;
 use Slim\Http\Response;
 
 class SampleController
 {
+    private $app;
+
+    public function __construct(Container $app)
+    {
+        $this->app = $app;
+    }
+
     public function index(Request $request, Response $response)
     {
         $name = $request->getAttribute('name');
-        $response = $response->withJson(["response" => "Hello, $name"], 200);
-        return $response;
+        $array = ['test' => "Hello, $name"];
+        //$response = $response->withJson(["response" => "Hello, $name"], 200);
+        return $this->app->view->render($response, 'sample', $array);
     }
 }

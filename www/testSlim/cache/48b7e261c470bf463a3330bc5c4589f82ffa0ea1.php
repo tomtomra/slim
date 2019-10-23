@@ -1,0 +1,1 @@
+<?php echo e($test); ?><?php /**PATH /var/www/testSlim/views/sample.blade.php ENDPATH**/ ?>
