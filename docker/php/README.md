@@ -1,0 +1,1 @@
+xdebug.remote_host -> ホストアドレスに変更する必要有り
