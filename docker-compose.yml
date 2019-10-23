@@ -12,7 +12,7 @@ services:
     depends_on:
       - php
     ports:
-      - 10080:80
+      - 10081:80
     volumes:
       - ./www/html:/var/www/html
       - ./logs:/var/log/nginx
@@ -32,7 +32,7 @@ services:
       - PMA_HOST=db
       - MYSQL_ROOT_PASSWORD=root
     ports:
-      - 4040:80
+      - 4041:80
     depends_on:
       - db
     volumes:
